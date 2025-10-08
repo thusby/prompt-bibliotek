@@ -1,0 +1,66 @@
+# Grunnleggjande info
+title: Prompt-bibliotek
+description: Kurerte samlingar av AI-prompt på nynorsk
+url: https://thusby.github.io
+baseurl: /prompt-bibliotek
+lang: nn
+encoding: utf-8
+
+# Collections
+collections:
+  personas:
+    output: true
+    permalink: /personas/:name/
+  prompt:
+    output: true
+    permalink: /prompt/:name/
+  grupper:
+    output: true
+    permalink: /grupper/:name/
+
+# Defaults for collections
+defaults:
+  - scope:
+      type: personas
+    values:
+      layout: persona
+  - scope:
+      type: prompt
+    values:
+      layout: prompt
+  - scope:
+      type: grupper
+    values:
+      layout: gruppe
+
+# Navigasjon
+navigation:
+  - title: Heim
+    url: /
+  - title: Personas
+    url: /personas/
+  - title: Alle prompt
+    url: /prompt/
+
+# Plugins
+plugins:
+  - jekyll-seo-tag
+  - jekyll-sitemap
+  - jekyll-feed
+
+# Ekskluder
+exclude:
+  - README.md
+  - CONTRIBUTING.md
+  - LICENSE
+  - Gemfile
+  - Gemfile.lock
+  - scripts/
+  - .github/
+  - vendor/
+
+# Markdown
+markdown: kramdown
+kramdown:
+  input: GFM
+  syntax_highlighter: rouge
